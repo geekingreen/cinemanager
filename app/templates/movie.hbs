@@ -1,0 +1,16 @@
+{{original_title}}
+
+<ul>
+{{#each cast}}
+	{{#if movies.length}}
+		<li>
+			{{gen-image profile_path}}{{name}} [{{character}}]
+			{{#each movies}}
+				{{original_title}}
+				{{log this}}
+				{{gen-image poster_path}}
+			{{/each}}
+		</li>
+	{{/if}}
+{{/each}}
+</ul>

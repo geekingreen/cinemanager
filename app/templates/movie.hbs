@@ -7,9 +7,12 @@
 		<li>
 			{{gen-image profile_path}}{{name}} [{{character}}]
 			{{#each movies}}
-				{{original_title}}
-				{{log this}}
-				{{gen-image poster_path}}
+				{{#link-to 'movie' id tagName='li'}}
+					{{id}}
+					{{original_title}}
+					{{log this}}
+					{{gen-image poster_path}}
+				{{/link-to}}
 			{{/each}}
 		</li>
 	{{/if}}
